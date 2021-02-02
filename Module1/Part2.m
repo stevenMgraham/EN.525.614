@@ -40,17 +40,21 @@ for m = 1:M1000000
     end
 end
 
-norm_probability_M10 = sum(probability_values_array_M10) / M10;
-norm_probability_M100 = sum(probability_values_array_M100) / M100;
-norm_probability_M1000000 = sum(probability_values_array_M1000000) / M1000000;
+norm_probability_M10 = sum(probability_values_array_M10) ./ M10;
+norm_probability_M100 = sum(probability_values_array_M100) ./ M100;
+norm_probability_M1000000 = sum(probability_values_array_M1000000) ./ M1000000;
 
 figure
 hold all
 subplot(1, 3, 1)
-histogram(norm_probability_M10, num_successes);
+hist(norm_probability_M10, 11);
+title('M = 10');
 subplot(1, 3, 2)
-histogram(norm_probability_M100, num_successes);
+hist(norm_probability_M100, 11);
+title('M = 100');
 subplot(1, 3, 3)
-histogram(norm_probability_M1000000, num_successes);
+hist(norm_probability_M1000000, 11);
+title('M = 1000000');
+saveas(gcf, 'StevenGraham_Module1_Part2_MATLAB.png');
 
 

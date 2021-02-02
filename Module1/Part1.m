@@ -12,8 +12,10 @@ for k = num_successes
     probability_values(k + 1) = probability_val;
 end
 
-figure();
+figure;
 plot(num_successes, probability_values)
-xlabel('Number of successes')
-ylabel('Probability(number of successes)')
-title({'Discrete distribution for binomial distribution'}, {'N = 10, p = 0.7'})
+xlabel('Number of successes');
+ylabel('Probability(number of successes)');
+title({'Discrete distribution for binomial distribution'}, {'N = 10, p = 0.7'});
+saveas(gcf, 'StevenGraham_Module1_Part1_MATLAB.png');
+close(figure)
