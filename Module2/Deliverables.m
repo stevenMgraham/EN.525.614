@@ -1,0 +1,3 @@
+function compute_probability_given_interval()
+
+end
